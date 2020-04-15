@@ -25,8 +25,8 @@ var (
 )
 
 func twitter() {
-	config := oauth1.NewConfig("4KTqJQsBJF9vMHvMNVxxZivJq", "TqqlixiWLJvW5BLeaTzteppUy9Ky1o0MI5qk0RgM4dMGo4vcZl")
-	token := oauth1.NewToken("1249692436630253570-QPjINMFD7dd6GZwOcIW0pWTnnhNw0e", "lxoanAwDPGceIGIg1DWG6vnCq58Jo2LrG1g5fvAbE9aQY")
+	config := oauth1.NewConfig("", "")
+	token := oauth1.NewToken("", "")
 	httpClient := config.Client(oauth1.NoContext, token)
 	clienttw := twitter.NewClient(httpClient)
 	return clienttw
