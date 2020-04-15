@@ -4,10 +4,15 @@ import (
 	"context"
 	"fmt"
 	"os"
+	"sort"
 	"time"
 
 	"github.com/adshao/go-binance"
 	"github.com/adshao/go-binance/futures"
+	sdk "github.com/binance-chain/go-sdk/client"
+	"github.com/binance-chain/go-sdk/common/types"
+	"github.com/binance-chain/go-sdk/keys"
+	"github.com/dghubble/go-twitter/twitter"
 	"github.com/dghubble/oauth1"
 )
 
