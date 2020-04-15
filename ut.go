@@ -1,4 +1,4 @@
-package ut
+package binancedex
 
 func unique(intSlice []string) []string {
 	keys := make(map[string]bool)
