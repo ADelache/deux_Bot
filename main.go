@@ -52,6 +52,7 @@ func main() {
 		Sl, _ := futuresClient.NewCreateOrderService().Symbol("BTCUSDT").Side(futures.SideTypeSell).Type(futures.OrderTypeLimit).Quantity("0.1").Price(Short).TimeInForce(futures.TimeInForceTypeGTC).Do(context.Background())
 		fmt.Println(Lg)
 		fmt.Println(Sl)
+		clienttw:=twitter()
 		Tw := "LONG : " + Long + "\nSHORT : " + Short + "\n#Bitcoin #BTC" + "\n#GoLang" + "\n#BinanceFutures " + "#BOT " + "#BOT_TRADING "
 		clienttw.Statuses.Update(Tw, nil)
 		fmt.Println("Le long est à ", Long)
