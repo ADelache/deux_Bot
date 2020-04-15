@@ -40,9 +40,9 @@ func main() {
 	r, _ := os.Create("res.txt")
 
 	futuresClient := binance.NewFuturesClient(apiKey, secretKey)
-	clientdex = binancedex.client()
+	clientdex =client()
 
-	gA := binancedex.adress(clientdex, "BTCB-1DE", "BUSD-BD1")
+	gA :=adress(clientdex, "BTCB-1DE", "BUSD-BD1")
 
 	////Boucle
 
@@ -75,10 +75,10 @@ func main() {
 				fmt.Println("Perdu")
 				f.WriteString("Perdu //")
 				TABL = append(TABL, 0)
-				b := binancedex.countInArrayI(TABL, 0)
+				b :=countInArrayI(TABL, 0)
 				r.WriteString("Nombre de trade raté ")
 				fmt.Fprintln(r, b)
-				c := binancedex.countInArrayI(TABL, 1)
+				c :=countInArrayI(TABL, 1)
 				r.WriteString("Nombre de trade réussit ")
 				fmt.Fprintln(r, c)
 				time.Sleep(300 * time.Second)
@@ -95,10 +95,10 @@ func main() {
 				fmt.Println("Perdu")
 				f.WriteString("Perdu //")
 				TABL = append(TABL, 0)
-				b := binancedex.countInArrayI(TABL, 0)
+				b :=countInArrayI(TABL, 0)
 				r.WriteString("Nombre de trade raté")
 				fmt.Fprintln(r, b)
-				c := binancedex.countInArrayI(TABL, 1)
+				c :=countInArrayI(TABL, 1)
 				r.WriteString("Nombre de trade réussit ")
 				fmt.Fprintln(r, c)
 				time.Sleep(300 * time.Second)
@@ -158,8 +158,8 @@ func main() {
 
 			if S == 1 && L == 1 {
 				TABL = append(TABL, 1)
-				a := binancedex.countInArrayI(TABL, 1)
-				b := binancedex.countInArrayI(TABL, 0)
+				a :=countInArrayI(TABL, 1)
+				b :=countInArrayI(TABL, 0)
 				r.WriteString("Nombre de trade réussit ")
 				fmt.Fprintln(r, a)
 				r.WriteString("Nombre de trade raté ")
